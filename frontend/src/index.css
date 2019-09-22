@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --default-margin: 1em;
+  --border-color: #ccc;
+  --button-color: tomato;
+  --border-radius: 0.25rem;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-header {
+  color: #fff;
+  background: var(--button-color);
+  text-align: center;
+  padding: calc(var(--default-margin) - 0.5em) 0;
+  margin-bottom: var(--default-margin);
+}
+
+.main-container,
+.tasks__list {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-container {
+  width: 60%;
+  background: white;
+  padding: var(--default-margin);
+  border-radius: var(--border-radius);
+}
+
+.tasks__input {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  font-size: var(--default-margin);
+  margin-bottom: calc(var(--default-margin) + 0.5em);
+}
+
+.tasks__list {
+  width: 100%;
+  list-style: none;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-color);
+}
+
+.tasks__item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--default-margin);
+  position: relative;
+}
+
+.tasks__item:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.tasks__item button {
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: 99%;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 60%;
+  background: var(--button-color);
+  padding: var(--border-radius);
+  cursor: pointer;
+  transition: all ease-in 200ms;
+}
+
+.tasks__item:hover button {
+  display: block;
+}
+
+.tasks__item--completed {
+  text-decoration: line-through;
+  color: #ccc;
+}
