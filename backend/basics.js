@@ -1,4 +1,5 @@
 const axios = require('axios');
+
 const URL = 'https://my-json-server.typicode.com/jubs16/Products/Products';
 
 function add(x, y) {
@@ -9,11 +10,11 @@ function fizzbuzz(number) {
   if (number % 3 === 0 && number % 5 === 0) {
     return 'fizzbuzz';
   }
-  if (n % 3 === 0) {
+  if (number % 3 === 0) {
     return 'fizz';
   }
 
-  if (n % 5 === 0) {
+  if (number % 5 === 0) {
     return 'buzz';
   }
 
@@ -37,4 +38,5 @@ module.exports = {
   add,
   fizzbuzz,
   getTotalPriceInCOP,
+  URL,
 };
