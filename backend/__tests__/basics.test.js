@@ -7,6 +7,9 @@ describe('Tests basicos', () => {
   describe('Tests para la funcion de suma', () => {
     it('Deberia retornar 5 dado 3 y 2', () => {
       expect(add(3, 2)).toBe(5);
+    });
+
+    it('Deberia retornar 9 dado 3 y 6', () => {
       expect(add(3, 6)).toBe(9);
     });
   });
@@ -25,7 +28,7 @@ describe('Tests basicos', () => {
     });
   });
 
-  describe('Tests para la funcion para conseguir precio total en pesos colombianos', () => {
+  describe('Tests para la funcion que consigue precio total en pesos colombianos', () => {
     it('Deberia retornar la suma total en pesos colombianos', async () => {
       const products = [
         { price: 110 },
